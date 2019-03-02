@@ -10,9 +10,9 @@ and execute the follow command::
 
 Followed by::
 
-    $ python manage.py migrate
+    $ python3 manage.py migrate
 
-    $ python manage.py runserver
+    $ python3 manage.py runserver
 
 And open the following URL in your web browser:
 

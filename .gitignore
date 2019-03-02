@@ -1,5 +1,6 @@
 # Python related
 __pycach__/
+*.pyc
 
 # Django related
 *.log
