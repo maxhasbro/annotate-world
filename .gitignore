@@ -1,6 +1,7 @@
 # Python related
-__pycach__/
+__pycache__/
 *.pyc
 
 # Django related
 *.log
+.DS_Store
