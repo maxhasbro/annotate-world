@@ -17,3 +17,11 @@ Followed by::
 And open the following URL in your web browser:
 
  - http://127.0.0.1:8000/
+
+To test out continent and country creation you can use:
+
+ curl -X POST -d 'name=Asia&latitude_center=10.0&longitude_center=13.0' http://127.0.0.1:8000/createContinent
+
+ followed by
+
+ curl -X POST -d 'name=Japan&latitude_center=12.0&longitude_center=44.0&continent_id=1' http://127.0.0.1:8000/createCountry
