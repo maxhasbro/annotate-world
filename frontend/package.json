@@ -11,9 +11,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
-    "redux-little-router": "^15.1.2",
     "typescript": "3.4.5"
   },
   "scripts": {
@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-redux": "^7.0.9"
+    "@types/react-redux": "^7.0.9",
+    "@types/react-router-dom": "^5.1.2"
   }
 }
