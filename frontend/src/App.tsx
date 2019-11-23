@@ -1,27 +1,16 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+import React from 'react';
 import './App.css';
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
-import { routerForBrowser } from 'redux-little-router';
+import Home from './components/Home'
+import { RouteComponentProps } from 'react-router-dom';
 
-import routes from './routes';
 
-const { reducer, enhancer, middleware } = routerForBrowser({ routes });
-const initialState = {};
+type Params = { route: string }
 
-const store = createStore(
-  combineReducers({router: reducer}),
-  initialState,
-  compose(enhancer, applyMiddleware(middleware))
-);
-
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-      </Provider>
-    );
-  }
-}
+const App = ({match}: RouteComponentProps<Params> ) => (
+    <div>
+      <Home/>
+      <h3>{match.params.route}</h3>
+    </div>
+)
 
 export default App;
