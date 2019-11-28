@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
 import Home from './components/Home'
-import { RouteComponentProps } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-
-type Params = { route: string }
-
-const App = ({match}: RouteComponentProps<Params> ) => (
+const App = () => (
     <div>
       <Home/>
-      <h3>{match.params.route}</h3>
+      <Link to='/modify/asdf'>asdf</Link>
+      <br/>
+      <Link to='/modify/qwerty'>qwerty</Link>
+      <br/>
+      <br/>
+      <Link to='/about'>About us</Link>
     </div>
 )
 

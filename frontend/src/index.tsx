@@ -6,13 +6,17 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { createStore } from 'redux'
 import { annotateWorldApp } from './reducers/reducers'
 import App from './App';
+import About from './components/About'
+import Modify from './components/Modify'
 
 const store = createStore(annotateWorldApp);
 
 const Root = () => (
   <Provider store={store}>
       <Router>
-        <Route path="/:route?" component={App} />
+        <Route exact path="/" component={App} />
+        <Route path="/modify/:route?" component={Modify} />
+        <Route path="/about" component={About} />
       </Router>
   </Provider>
 );
